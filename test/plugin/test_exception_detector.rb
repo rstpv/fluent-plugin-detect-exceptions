@@ -126,6 +126,67 @@ Caused by: com.example.myproject.MyProjectServletException
     ... 27 more
 END
 
+
+STDOUT_JAVA_EXC = <<END.freeze
+14:03:53,849 ERROR [STDERR] javax.faces.FacesException: Some weird exception
+14:03:53,849 ERROR [STDERR] \\u0009at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:85) 
+14:03:53,849 ERROR [STDERR] \\u0009at com.sun.faces.lifecycle.Phase.doPhase(Phase.java:97) 
+14:03:53,849 ERROR [STDERR] \\u0009at com.sun.faces.lifecycle.LifecycleImpl.execute(LifecycleImpl.java:114) 
+14:03:53,849 ERROR [STDERR] \\u0009at javax.faces.webapp.FacesServlet.service(FacesServlet.java:308) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) 
+14:03:53,849 ERROR [STDERR] \\u0009at com.jspbook.GZIPFilter.doFilter(GZIPFilter.java:26) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) 
+14:03:53,849 ERROR [STDERR] \\u0009at com.example.tag.UploadFilter.doFilter(UploadFilter.java:67) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) 
+14:03:53,849 ERROR [STDERR] \\u0009at com.example.some.package.WeirdClass.weirdMethod(WeirdClass.java:29) 
+14:03:53,849 ERROR [STDERR] \\u0009at com.example.filter.SomeFilter.doFilter(SomeFilter.java:30) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:96) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:235) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.jboss.web.tomcat.security.SecurityAssociationValve.invoke(SecurityAssociationValve.java:190) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.jboss.web.tomcat.security.JaccContextValve.invoke(JaccContextValve.java:92) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.jboss.web.tomcat.security.SecurityContextEstablishmentValve.process(SecurityContextEstablishmentValve.java:126) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.jboss.web.tomcat.security.SecurityContextEstablishmentValve.invoke(SecurityContextEstablishmentValve.java:70) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.jboss.web.tomcat.service.jca.CachedConnectionValve.invoke(CachedConnectionValve.java:158) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:330) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:829) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:598) 
+14:03:53,849 ERROR [STDERR] \\u0009at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447) 
+14:03:53,849 ERROR [STDERR] \\u0009at java.lang.Thread.run(Thread.java:745) 
+14:03:53,850 ERROR [STDERR] Caused by: javax.faces.FacesException: Some weird exception
+14:03:53,850 ERROR [STDERR] \\u0009at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:114) 
+14:03:53,850 ERROR [STDERR] \\u0009at javax.faces.component.UICommand.broadcast(UICommand.java:311) 
+14:03:53,850 ERROR [STDERR] \\u0009at javax.faces.component.UIViewRoot.broadcastEvents(UIViewRoot.java:781) 
+14:03:53,850 ERROR [STDERR] \\u0009at javax.faces.component.UIViewRoot.processApplication(UIViewRoot.java:1246) 
+14:03:53,850 ERROR [STDERR] \\u0009at com.sun.faces.lifecycle.InvokeApplicationPhase.execute(InvokeApplicationPhase.java:77) 
+14:03:53,850 ERROR [STDERR] \u0009... 33 more 
+14:03:53,850 ERROR [STDERR] Caused by: javax.faces.el.EvaluationException: Some weird exception 
+14:03:53,850 ERROR [STDERR] \\u0009at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:98) 
+14:03:53,850 ERROR [STDERR] \\u0009at com.sun.faces.application.ActionListenerImpl.processAction(ActionListenerImpl.java:98) 
+14:03:53,850 ERROR [STDERR] \u0009... 37 more 
+14:03:53,850 ERROR [STDERR] Caused by: javax.faces.validator.ValidatorException: Some Exception.
+14:03:53,850 ERROR [STDERR] \\u0009at com.example.anotherPackage.SomeClass.someMethod(SomeClass.java:1688) 
+14:03:53,850 ERROR [STDERR] \\u0009at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) 
+14:03:53,850 ERROR [STDERR] \\u0009at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) 
+14:03:53,850 ERROR [STDERR] \\u0009at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) 
+14:03:53,850 ERROR [STDERR] \\u0009at java.lang.reflect.Method.invoke(Method.java:606) 
+14:03:53,850 ERROR [STDERR] \\u0009at org.apache.el.parser.AstValue.invoke(AstValue.java:170) 
+14:03:53,850 ERROR [STDERR] \\u0009at org.apache.el.MethodExpressionImpl.invoke(MethodExpressionImpl.java:276) 
+14:03:53,850 ERROR [STDERR] \\u0009at com.sun.faces.facelets.el.TagMethodExpression.invoke(TagMethodExpression.java:102) 
+14:03:53,850 ERROR [STDERR] \\u0009at javax.faces.component.MethodBindingMethodExpressionAdapter.invoke(MethodBindingMethodExpressionAdapter.java:84) 
+14:03:53,850 ERROR [STDERR] \u0009... 38 more 
+END
+
   NODE_JS_EXC = <<END.freeze
 ReferenceError: myArray is not defined
   at next (/app/node_modules/express/lib/router/index.js:256:14)
@@ -597,6 +658,8 @@ END
     check_exception(COMPLEX_JAVA_EXC, false)
     check_exception(COMPLEX_JAVA_EXC_TABS, false)
     check_exception(COMPLEX_JAVA_EXC_ESCAPED_TABS, false)
+    check_exception(STDOUT_JAVA_EXC, false)
+       
   end
 
   def test_js

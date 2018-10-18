@@ -51,11 +51,11 @@ module Fluent
 
     JAVA_RULES = [
       rule(:start_state,
-           /(?:Exception|Error|Throwable|V8 errors stack trace)[:\r\n]?/,
+           /(\d{2}:\d{2}:\d{2},\d+\s\w+\s\[\w+\] [\p{Word}\s:,\[\]]+)|((\d{2}:\d{2}:\d{2},\d+\s\w+\s\[STDERR\])?(?:Exception|Error|Throwable|V8 errors stack trace))[:\r\n]?/,
            :java),
-      rule(:java, /^([\t\s\\u0009\\t])+(?:eval )?at /, :java),
-      rule(:java, /^([\t\s\\u0009\\t])*(?:Caused by|Suppressed):/, :java),
-      rule(:java, /^([\t\s\\u0009\\t])*... \d+\ more/, :java)
+      rule(:java, /^(\d{2}:\d{2}:\d{2},\d+\s\w+\s\[STDERR\])?([\t\s\\u0009\\t])+(?:eval )?at /, :java),
+      rule(:java, /^(\d{2}:\d{2}:\d{2},\d+\s\w+\s\[STDERR\])?([\t\s\\u0009\\t])*(?:Caused by|Suppressed):/, :java),
+      rule(:java, /^(\d{2}:\d{2}:\d{2},\d+\s\w+\s\[STDERR\])?([\t\s\\u0009\\t])*... \d+\ more/, :java)
     ].freeze
 
     PYTHON_RULES = [
